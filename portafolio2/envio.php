@@ -9,7 +9,7 @@ if ($es_local) {
 } else {
     $host     = "sql210.infinityfree.com";
     $user     = "if0_43499658";
-    $password = "to8iCQKpTc";
+    $password = "eeeeeeeee";
     $db       = "if0_43499658_portafolio";
 }
 
