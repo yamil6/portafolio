@@ -1,0 +1,41 @@
+/* Botón hamburguesa: oculto en pantallas grandes */
+#menu{
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:980px){
+    #menu{
+        display: block;
+    }
+    .cabeza{
+        position: fixed;
+        top: var(--alto-header);
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - var(--alto-header));
+        overflow-y: auto;
+        background: var(--fondo-2);
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.5s ease-out, visibility 0.5s;
+    }
+    .cabeza.abierto{
+        transform: translateX(0);
+        visibility: visible;
+    }
+    .cabeza ul{
+        flex-direction: column;
+    }
+    .cabeza a{
+        padding: 18px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+}
